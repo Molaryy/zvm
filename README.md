@@ -99,8 +99,26 @@ instead for building the app.
 
 ## Putting ZVM on your Path
 
-ZVM requires a few directories to be on your `$PATH`. If you don't know how to
-update your environment variables permanently on Windows, you can follow
+ZVM requires a few directories to be on your `$PATH`.
+
+### Linux, BSD, MacOS, *nix
+
+The installer script handles this for you automatically. If you need to set it
+up manually, append the following to your shell's startup file (`~/.bashrc`,
+`~/.zshrc`, or `~/.profile`):
+
+```sh
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
+```
+
+Then restart your shell or `source` the file for the changes to take effect.
+
+### Windows
+
+If you don't know how to update your environment variables permanently on
+Windows, you can follow
 [this guide](https://www.computerhope.com/issues/ch000549.htm). Once you're in
 the appropriate menu, add or append to the following environment variables:
 
