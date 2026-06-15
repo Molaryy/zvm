@@ -109,8 +109,7 @@ up manually, append the following to your shell's startup file (`~/.bashrc`,
 
 ```sh
 export ZVM_INSTALL="$HOME/.zvm/self"
-export PATH="$PATH:$HOME/.zvm/bin"
-export PATH="$PATH:$ZVM_INSTALL/"
+export PATH="$HOME/.zvm/bin:$ZVM_INSTALL:$PATH"
 ```
 
 Then restart your shell or `source` the file for the changes to take effect.
